@@ -26,6 +26,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="amethyst_global-user 16 BP2A.250605.031.A3 OS3.0.4.0.WOPMIXM release-keys" \
     BuildFingerprint=Redmi/amethyst_global/amethyst:16/BP2A.250605.031.A3/OS3.0.4.0.WOPMIXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
-    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
+    RisingChipset="Snapdragon 7s Gen 3" \
+    RisingMaintainer="Novicio-301129"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Rising
+RISING_MAINTAINER := Novicio-301129
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := true
+WITH_GMS := true
