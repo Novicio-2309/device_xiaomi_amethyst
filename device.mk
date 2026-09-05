@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-WITH_DEXPREOPT := false
-
 # Generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
@@ -454,9 +452,6 @@ $(call inherit-product, vendor/xiaomi/amethyst/amethyst-vendor.mk)
 # Xiaomi Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Rom signing
--include vendor/lineage-priv/keys/keys.mk
 
 # MiuiCamera
 $(call inherit-product-if-exists, device/xiaomi/amethyst-miuicamera/device.mk)
