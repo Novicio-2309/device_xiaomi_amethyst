@@ -15,8 +15,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
-# ViPER4AndroidFX
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+# JamesDSP
+$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
 # Dolby Audio Processing
 $(call inherit-product, packages/apps/LunarisDolby/dolby.mk)
@@ -290,6 +290,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
+
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/derp-overlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
