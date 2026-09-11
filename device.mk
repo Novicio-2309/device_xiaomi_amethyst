@@ -16,7 +16,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
 # JamesDSP
-$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
+# $(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
 # Dolby Audio Processing
 $(call inherit-product, packages/apps/LunarisDolby/dolby.mk)
