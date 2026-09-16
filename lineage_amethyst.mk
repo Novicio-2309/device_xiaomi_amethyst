@@ -32,3 +32,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # DerpFest
 DERPFEST_BUILD_VARIANT := Stable
+WITH_GMS=false
