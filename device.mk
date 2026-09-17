@@ -291,10 +291,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/derp-overlay
-
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
