@@ -281,6 +281,7 @@ PRODUCT_PACKAGES += \
     LineageSDKOverlayAmethyst \
     LineageSettingsOverlayAmethyst \
     NfcOverlayAmethyst \
+    Launcher3OverlayAmethyst \
     SecureElementOverlayAmethyst \
     SettingsOverlayAmethyst \
     SettingsProviderOverlayAmethyst \
