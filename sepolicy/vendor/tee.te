@@ -9,4 +9,5 @@ allow tee vendor_fingerprint_data_file_fpdump:file create_file_perms;
 allow tee vendor_gunyah_dev:chr_file { create rw_file_perms setattr unlink };
 allow tee vendor_gunyah_chr_device:chr_file { create rw_file_perms setattr unlink };
 hal_client_domain(tee, vendor_hal_qvirtservice)
-
+allow tee mnt_vendor_file:dir r_dir_perms;
+allow tee mnt_vendor_file:file rw_file_perms;
