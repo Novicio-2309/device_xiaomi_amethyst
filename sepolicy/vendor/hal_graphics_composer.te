@@ -21,3 +21,4 @@ set_prop(hal_graphics_composer_default, vendor_displayfeature_prop)
 hal_client_domain(hal_graphics_composer_default, vendor_hal_displayfeature_xiaomi)
 add_service(hal_graphics_composer_default, vendor_mistcdisplay_service)
 add_service(hal_graphics_composer_default, vendor_miclstc_service)
+allow hal_graphics_composer_default vendor_latency_device:chr_file rw_file_perms;
