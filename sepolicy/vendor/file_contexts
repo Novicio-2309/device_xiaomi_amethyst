@@ -160,3 +160,7 @@
 
 # Reserved pool
 /sys/kernel/reserve_pool(/.*)?    u:object_r:vendor_sysfs_reserve_pool:s0
+
+# TEE / QSEECOM Device Node Labeling
+/dev/qseecom                                     u:object_r:tee_device:s0
+/dev/tee[0-9]*                                   u:object_r:tee_device:s0
