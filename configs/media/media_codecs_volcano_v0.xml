@@ -105,7 +105,7 @@
     <Include href="media_codecs_c2_audio.xml" />
     <Include href="media_codecs_mi_c2_audio.xml" />
     <Settings>
-        <Setting name="max-video-encoder-input-buffers" value="11" />
+        <Setting name="max-video-encoder-input-buffers" value="32" />
     </Settings>
     <Decoders>
         <!-- C2 decoders -->
@@ -268,7 +268,7 @@
             <Limit name="blocks-per-second" min="64" max="2073600" />
             <Limit name="block-count" range="64-8160" />
             <Limit name="bitrate" range="1-40000000" />
-            <Limit name="frame-rate" range="1-60" />
+            <Limit name="frame-rate" range="1-120" />
             <Limit name="complexity" range="0-100"  default="0" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
@@ -276,8 +276,8 @@
             <Feature name="encoding-statistics" />
             <Feature name="low-latency" />
             <Feature name="video-minimum-quality" />
-            <Limit name="performance-point-1280x720" value="60" />
-            <Limit name="performance-point-1920x1080" value="60" />
+            <Limit name="performance-point-1280x720" value="120" />
+            <Limit name="performance-point-1920x1080" value="120" />
             <Limit name="performance-point-3840x2160" value="60" />
             <Limit name="performance-point-4096x2160" value="60" />
         </MediaCodec>
