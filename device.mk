@@ -461,9 +461,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
 
-# WiFi Display
+# WFD Packages
 PRODUCT_PACKAGES += \
-    libwfdnative
+    libwfdnative \
+    libwfdmmsrc \
+    libwfdservice \
+    WfdCommon
 
 # Wi-Fi Display (WFD) Properties
 PRODUCT_VENDOR_PROPERTIES += \
