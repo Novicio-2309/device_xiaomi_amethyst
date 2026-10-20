@@ -111,6 +111,10 @@ vendor.display.enable_hdr10_gpu_target=1
 vendor.display.enable_optimize_refresh=0
 vendor.display.vds_allow_hwc=1
 
+# Disable CWB to fix Screencast auto-disconnect
+vendor.display.enable_concurrent_writeback=0
+debug.sf.enable_hwc_vds=0
+
 # DPM
 persist.vendor.dpm.vndr.feature=1
 persist.vendor.dpm.vndr.halservice.enable=1
@@ -148,7 +152,6 @@ debug.sf.disable_client_composition_cache=0
 debug.sf.enable_gl_backpressure=0
 debug.sf.layer_caching_active_layer_timeout_ms=1000
 debug.sf.hw=1
-debug.sf.enable_hwc_vds=1
 debug.sf.early.app.duration=13666666
 debug.sf.early.sf.duration=12333333
 debug.sf.earlyGl.app.duration=13666666
