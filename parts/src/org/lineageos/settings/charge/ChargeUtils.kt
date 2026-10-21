@@ -18,10 +18,11 @@ package org.lineageos.settings.charge
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.SystemProperties
 import android.util.Log
 import androidx.preference.PreferenceManager
 import org.lineageos.settings.chargelimit.ChargeLimitUtils
-import org.lineageos.settings.utils.FileUtils
+import java.io.File
 
 class ChargeUtils(context: Context) {
 
@@ -32,7 +33,7 @@ class ChargeUtils(context: Context) {
             if (sharedPrefs.getBoolean(ChargeLimitUtils.PREF_PAUSED, false)) {
                 sharedPrefs.getBoolean(PREF_BYPASS_CHARGE, false)
             } else {
-                FileUtils.readOneLine(BYPASS_CHARGE_NODE) == "1"
+                readNode(BYPASS_CHARGE_NODE) == "1"
             }
         } catch (e: Exception) {
             Log.e(TAG, "Failed to read bypass charge status", e)
@@ -44,16 +45,45 @@ class ChargeUtils(context: Context) {
         try {
             sharedPrefs.edit().putBoolean(PREF_BYPASS_CHARGE, enable).apply()
             val limiterPaused = sharedPrefs.getBoolean(ChargeLimitUtils.PREF_PAUSED, false)
-            FileUtils.writeLine(BYPASS_CHARGE_NODE, if (enable || limiterPaused) "1" else "0")
+            val value = if (enable || limiterPaused) "1" else "0"
+            
+            writeNode(BYPASS_CHARGE_NODE, value)
+            
+            SystemProperties.set(PROP_BYPASS_CHARGE, value)
         } catch (e: Exception) {
             Log.e(TAG, "Failed to write bypass charge status", e)
         }
     }
 
+    private fun readNode(node: String): String {
+        return try {
+            val file = File(node)
+            if (file.exists()) {
+                file.readText().trim()
+            } else ""
+        } catch (e: Exception) {
+            Log.e(TAG, "Node $node not readable", e)
+            ""
+        }
+    }
+
+    private fun writeNode(node: String, value: String) {
+        try {
+            val file = File(node)
+            if (file.exists() && file.canWrite()) {
+                file.writeText(value)
+            } else {
+                Log.e(TAG, "Node $node is not writable")
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to write $value to $node", e)
+        }
+    }
+
     private fun isNodeAccessible(node: String): Boolean {
         return try {
-            FileUtils.readOneLine(node)
-            true
+            val file = File(node)
+            file.exists()
         } catch (e: Exception) {
             Log.e(TAG, "Node $node not accessible", e)
             false
@@ -66,7 +96,8 @@ class ChargeUtils(context: Context) {
 
     companion object {
         private const val TAG = "ChargeUtils"
-        const val BYPASS_CHARGE_NODE = "/sys/class/qcom-battery/charge_control_en"
+        const val BYPASS_CHARGE_NODE = "/sys/class/qcom-battery/input_suspend"
         const val PREF_BYPASS_CHARGE = "bypass_charge"
+        const val PROP_BYPASS_CHARGE = "persist.sys.bypass_charging"
     }
 }
