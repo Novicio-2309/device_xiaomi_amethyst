@@ -300,6 +300,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-miku
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
