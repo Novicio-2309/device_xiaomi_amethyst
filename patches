@@ -1,0 +1,42 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Novicio301129 <user@build-server>
+Date: Mon, 19 Oct 2026 00:00:00 +0800
+Subject: [PATCH] BatteryService: Add bypass charging UI override
+
+Force BATTERY_PLUGGED_AC and CHARGING status when input_suspend is active via
+persist.sys.bypass_charging property to preserve charging UI state.
+
+---
+ services/core/java/com/android/server/BatteryService.java | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/services/core/java/com/android/server/BatteryService.java b/services/core/java/com/android/server/BatteryService.java
+index 1111111..2222222 100644
+--- a/services/core/java/com/android/server/BatteryService.java
++++ b/services/core/java/com/android/server/BatteryService.java
+@@ -43,6 +43,7 @@ import android.os.HandlerThread;
+ import android.os.IBinder;
+ import android.os.DropBoxManager;
+ import android.os.SystemClock;
++import android.os.SystemProperties;
+ import android.os.UserHandle;
+ import android.provider.Settings;
+ import android.util.Slog;
+@@ -800,6 +801,15 @@ public class BatteryService extends SystemService {
+         mBatteryProps = props;
+         mHealthInfo = props;
+ 
++        // Bypass Charging UI Override
++        boolean isBypassActive = SystemProperties.getBoolean("persist.sys.bypass_charging", false);
++        if (isBypassActive) {
++            if (mPlugType == 0) {
++                mPlugType = BatteryManager.BATTERY_PLUGGED_AC;
++            }
++            mBatteryStatus = BatteryManager.BATTERY_STATUS_CHARGING;
++        }
++
+         // Process values
+         processValuesLocked(false);
+     }
+-- 
+2.34.1
