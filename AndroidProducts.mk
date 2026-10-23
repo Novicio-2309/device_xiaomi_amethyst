@@ -4,7 +4,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_amethyst.mk
+    $(LOCAL_DIR)/miku_amethyst.mk
 
 COMMON_LUNCH_CHOICES := \
      miku_amethyst-user \
