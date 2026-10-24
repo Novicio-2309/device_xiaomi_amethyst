@@ -463,10 +463,7 @@ PRODUCT_COPY_FILES += \
 
 # WFD Packages
 PRODUCT_PACKAGES += \
-    libwfdnative \
-    libwfdmmsrc \
-    libwfdservice \
-    WfdCommon
+    libwfdnative
 
 # Wi-Fi Display (WFD) Properties
 PRODUCT_VENDOR_PROPERTIES += \
