@@ -27,14 +27,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Redmi/amethyst_global/amethyst:16/BP2A.250605.031.A3/16OS3.1.260824.102142654.QCPEGL.S:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
-    RisingChipset="Snapdragon 7s Gen 3" \
-    RisingMaintainer="Novicio301129"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Rising
-RISING_MAINTAINER := Novicio301129
-TARGET_ENABLE_BLUR := true
-PRODUCT_NO_CAMERA := true
+# MistOS
+MISTOS_MAINTAINER := "Novicio301129"
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
+TARGET_USES_MINI_GAPPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
