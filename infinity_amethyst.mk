@@ -8,12 +8,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from amethyst device
 $(call inherit-product, device/xiaomi/amethyst/device.mk)
 
-PRODUCT_NAME := lineage_amethyst
+PRODUCT_NAME := infinity_amethyst
 PRODUCT_DEVICE := amethyst
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -27,14 +27,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Redmi/amethyst_global/amethyst:16/BP2A.250605.031.A3/16OS3.1.260824.102142654.QCPEGL.S:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
-    RisingChipset="Snapdragon 7s Gen 3" \
-    RisingMaintainer="Novicio301129"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Rising
-RISING_MAINTAINER := Novicio301129
-TARGET_ENABLE_BLUR := true
-PRODUCT_NO_CAMERA := true
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
+# Infinity
+INFINITY_MAINTAINER := "Novicio301129"
+TARGET_HAS_UDFPS := true
+WITH_GAPPS := true
