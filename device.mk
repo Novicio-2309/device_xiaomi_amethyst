@@ -130,7 +130,7 @@ PRODUCT_COPY_FILES += \
 
 # CamX Override Settings for Front 60fps
 PRODUCT_COPY_FILES += \
-    device/xiaomi/amethyst/configs/camera/camxoverridesettings.txt:vendor/etc/camera/camxoverridesettings.txt
+    $(LOCAL_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
 
 # Display
 PRODUCT_PACKAGES += \
