@@ -18,8 +18,8 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 # ViPER4AndroidFX
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
-# Dolby Audio Processing
-$(call inherit-product-if-exists, packages/apps/LunarisDolby/dolby.mk)
+# JamesDSP
+$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
 # Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
