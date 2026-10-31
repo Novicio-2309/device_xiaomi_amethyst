@@ -1,2 +1,2 @@
-# Allow audioserver to read vendor audio props
-get_prop(audioserver, vendor_audio_prop)
+# Allow audioserver to access IRS/Presets for JamesDSP and Dolby
+r_dir_file(audioserver, media_rw_data_file)
