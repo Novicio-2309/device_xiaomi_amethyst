@@ -465,6 +465,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libwfdnative
 
+# Wi-Fi Display (WFD) Properties
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    persist.sys.wfd.hp=0 \
+    vendor.audio.feature.wfd.enable=true \
+    vendor.display.builtin_mirroring=true
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/amethyst/amethyst-vendor.mk)
 
