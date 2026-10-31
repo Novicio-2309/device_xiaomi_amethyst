@@ -1,0 +1,2 @@
+# Allow audioserver to read vendor audio props
+get_prop(audioserver, vendor_audio_prop)
