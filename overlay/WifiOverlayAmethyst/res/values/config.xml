@@ -175,4 +175,14 @@
 
     <!-- Whether WiFi display is supported during STA+AP concurrency -->
     <bool name="config_wifiDisplayOverlaysAreSupportedForStaApConcurrency" translatable="false">true</bool>
+
+     <!-- Wi-Fi HAL Interface Combinations for STA + P2P (Screen Cast) Concurrency -->
+    <string-array name="config_wifiHalInterfaceCombinations" translatable="false">
+        <item>[{STA} =&gt; 1, {P2P} =&gt; 1]</item>
+        <item>[{STA} =&gt; 2]</item>
+    </string-array>
+
+    <!-- Allowing the Local-Only Hotspot P2P Concurrency -->
+    <bool name="config_wifi_local_only_hotspot_p2p_concurrency_is_supported" translatable="false">true</bool>
+     
 </resources>
