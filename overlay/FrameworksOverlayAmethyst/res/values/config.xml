@@ -880,4 +880,5 @@
     <!-- Set Doze default refresh rate to 120Hz to prevent UDFPS ambient unlock flicker -->
     <integer name="config_defaultRefreshRateInDoze">120</integer>
 
+    <bool name="config_enableVirtualDisplay">true</bool>
 </resources>
