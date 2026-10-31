@@ -1,0 +1,5 @@
+[Debug]
+DebugLogEnable=0
+
+[Sensor]
+force_sensor_fps=60
