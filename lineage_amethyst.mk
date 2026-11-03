@@ -26,7 +26,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="amethyst_global-user 16 BP2A.250605.031.A3 16OS3.1.260824.102142654.QCPEGL.S release-keys" \
     BuildFingerprint=Redmi/amethyst_global/amethyst:16/BP2A.250605.031.A3/16OS3.1.260824.102142654.QCPEGL.S:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
-    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
     RisingChipset="Snapdragon 7s Gen 3" \
     RisingMaintainer="Novicio301129"
 
