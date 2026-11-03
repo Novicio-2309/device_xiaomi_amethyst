@@ -307,6 +307,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-miku
 
+# Camera Apps & Packages
+PRODUCT_PACKAGES += \
+    Aperture
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
