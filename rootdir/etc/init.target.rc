@@ -653,6 +653,9 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
+    # Restart audioserver to fix DSP initialization delay
+    restart audioserver
+
     # Restrict app access to unix domain socket tables
     chmod 0440 /proc/net/unix
 
