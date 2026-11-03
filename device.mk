@@ -308,6 +308,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Aperture
 
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-derp
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
