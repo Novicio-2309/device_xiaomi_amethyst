@@ -13,7 +13,7 @@ $(call inherit-product, vendor/miku/build/product/miku_product.mk)
 # Inherit from amethyst device
 $(call inherit-product, device/xiaomi/amethyst/device.mk)
 
-PRODUCT_NAME := lineage_amethyst
+PRODUCT_NAME := miku_amethyst
 PRODUCT_DEVICE := amethyst
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
