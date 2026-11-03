@@ -3,6 +3,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/gms
+
+$(call inherit-product, vendor/gms/gms_pico.mk)
+
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
