@@ -28,12 +28,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
     RisingChipset="Snapdragon 7s Gen 3" \
-    RisingMaintainer="Novicio301129"
+    RisingMaintainer="Carlosnoel-Bellarose"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # RisingOs
-RISING_MAINTAINER := Novicio301129
+RISING_MAINTAINER := Carlosnoel-Bellarose
 TARGET_ENABLE_BLUR := true
 PRODUCT_NO_CAMERA := true
 WITH_GMS := true
