@@ -304,6 +304,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
+# Camera Apps & Packages
+PRODUCT_PACKAGES += \
+    Aperture
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
