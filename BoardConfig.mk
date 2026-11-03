@@ -121,6 +121,8 @@ else
 # Kernel (prebuilt)
 TARGET_PREBUILT_KERNEL := $(PREBUILT_PATH)/images/kernel
 TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_CONFIG := amethyst_defconfig
+TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
 endif
 BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
