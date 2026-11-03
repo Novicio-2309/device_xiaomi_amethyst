@@ -25,6 +25,9 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 # JamesDSP
 $(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
 
+# Dolby Audio Processing
+$(call inherit-product-if-exists, packages/apps/LunarisDolby/dolby.mk)
+
 # Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
