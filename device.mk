@@ -359,13 +359,37 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
+    device/xiaomi/amethyst \
+    vendor/xiaomi/amethyst \
+    hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/xiaomi
+    hardware/qcom-caf/sm8650 \
+    hardware/qcom-caf/bootctrl \
+    hardware/qcom-caf/sm8650/audio/agm \
+    hardware/qcom-caf/sm8650/audio/graphservices \
+    hardware/qcom-caf/sm8650/audio/pal \
+    hardware/qcom-caf/sm8650/audio/primary-hal \
+    hardware/qcom-caf/sm8650/data-ipa-cfg-mgr \
+    hardware/qcom-caf/sm8650/dataipa \
+    hardware/qcom-caf/sm8650/display \
+    hardware/qcom-caf/thermal \
+    hardware/qcom-caf/wlan \
+    hardware/qcom-caf/wlan/qcwcn \
+    vendor/qcom/opensource/audio-hal/st-hal-ar \
+    vendor/qcom/opensource/commonsys/display \
+    vendor/qcom/opensource/commonsys-intf/display \
+    vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um \
+    vendor/qcom/opensource/dataservices \
+    vendor/qcom/opensource/display \
+    vendor/qcom/opensource/interfaces \
+    vendor/qcom/opensource/power \
+    vendor/qcom/opensource/thermal-engine \
+    vendor/qcom/opensource/vibrator \
+    vendor/qcom/opensource/usb/etc
 
 # Telephony
 PRODUCT_PACKAGES += \
