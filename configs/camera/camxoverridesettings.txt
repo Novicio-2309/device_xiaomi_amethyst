@@ -3,3 +3,9 @@ DebugLogEnable=0
 
 [Sensor]
 force_sensor_fps=60
+
+[Pipeline]
+# force the right buffer handle allocation for not encounter invalid thread handle errors on EIS
+EnableOfflineEIS=TRUE
+EnableConcurrentZoom=FALSE
+BufferQueueSize=6
