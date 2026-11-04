@@ -9,3 +9,4 @@ force_sensor_fps=60
 EnableOfflineEIS=TRUE
 EnableConcurrentZoom=FALSE
 BufferQueueSize=6
+ForceColorFormat=NV12
