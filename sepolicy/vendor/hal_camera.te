@@ -26,6 +26,7 @@ allow hal_camera_default vendor_sysfs_displayfeature:file { open read };
 allow hal_camera_default vendor_sysfs_kgsl:file { getattr open read };
 allow hal_camera_default sysfs:file r_file_perms;
 allow hal_camera_default vendor_displayfeature_device:chr_file { ioctl open read };
+allow hal_camera_default vendor_sysfs_reserve_pool:dir search;
 allow hal_camera_default vendor_camera_data_file:sock_file { create getattr read setattr unlink write };
 allow hal_camera_default vendor_video_mi_prop:file read;
 allow hal_camera_default vendor_sysfs_kgsl:file { getattr open read };
