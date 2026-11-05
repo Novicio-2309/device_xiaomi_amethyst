@@ -39,7 +39,10 @@ media.stagefright.enable-player=true
 # Front Camera & Video Color / Stride Fix
 debug.camx.disablepp=0
 camera.disable_zsl_mode=0
-media.stagefright.legacyencoder=true
+
+# --- Aperture EIS Front Mirroring Stride Fix ---
+vendor.video.encoder.use_native_buffer=1
+persist.vendor.camera.privapp.stream_split=1
 
 # QTI
 ro.vendor.qti.va_aosp.support=1
