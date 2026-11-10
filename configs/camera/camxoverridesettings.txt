@@ -5,8 +5,9 @@ DebugLogEnable=0
 force_sensor_fps=60
 
 [Pipeline]
-# force the right buffer handle allocation for not encounter invalid thread handle errors on EIS
+# I-force ang tamang buffer handle allocation para maiwasan ang invalid thread handle errors sa EIS
 EnableOfflineEIS=TRUE
 EnableConcurrentZoom=FALSE
 BufferQueueSize=6
 ForceColorFormat=NV12
+DisableMirroredProcessing=FALSE
